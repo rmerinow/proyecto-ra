@@ -1,24 +1,24 @@
 {
   "marcadores": [
     {
-      "nombre": "marcador1.patt",
+      "nombre": "marcado2.patt",
       "tipo": "modelo",
       "archivo": "modelos/modelo1.gltf"
-    },
-    {
-      "nombre": "marcado2.patt",
-      "tipo": "imagen",
-      "archivo": "imagenes/imagen1.jpg"
     },
     {
       "nombre": "marcado3.patt",
       "tipo": "imagen",
-      "archivo": "imagenes/imagen2.jpg"
+      "archivo": "imagenes/imagen1.jpg"
     },
     {
       "nombre": "marcador4.patt",
-      "tipo": "modelo",
-      "archivo": "modelos/modelo1.gltf"
+      "tipo": "texto",
+      "texto": "Bienvenido al Proyecto RA"
+    },
+    {
+      "nombre": "marcador5.patt",
+      "tipo": "enlace",
+      "url": "https://example.com"
     }
   ]
 }

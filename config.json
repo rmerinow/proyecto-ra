@@ -9,13 +9,13 @@
       "nombre": "marcador2.patt",
       "tipo": "imagen",
       "archivo": "imagenes/imagen1.jpg"
-    }, 
-     {
+    },
+    {
       "nombre": "marcador3.patt",
       "tipo": "imagen",
       "archivo": "imagenes/imagen2.jpg"
     },
-     {
+    {
       "nombre": "marcador4.patt",
       "tipo": "modelo",
       "archivo": "modelos/modelo1.gltf"

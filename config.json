@@ -6,12 +6,12 @@
       "archivo": "modelos/modelo1.gltf"
     },
     {
-      "nombre": "marcador2.patt",
+      "nombre": "marcado2.patt",
       "tipo": "imagen",
       "archivo": "imagenes/imagen1.jpg"
     },
     {
-      "nombre": "marcador3.patt",
+      "nombre": "marcado3.patt",
       "tipo": "imagen",
       "archivo": "imagenes/imagen2.jpg"
     },

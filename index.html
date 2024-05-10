@@ -22,13 +22,11 @@
     }
   </style>
   <script>
-    // Lista de cámaras disponibles y permite seleccionar una cámara específica
     async function seleccionarCamara() {
       const devices = await navigator.mediaDevices.enumerateDevices();
       const cameras = devices.filter(device => device.kind === 'videoinput');
       console.log("Cámaras disponibles:", cameras);
 
-      // Seleccionar la primera cámara trasera disponible
       const cameraDeviceId = cameras.find(camera => camera.label.toLowerCase().includes("back"))?.deviceId || cameras[0]?.deviceId;
 
       if (cameraDeviceId) {
@@ -55,7 +53,6 @@
       }
     }
 
-    // Función para cargar marcadores desde el archivo JSON
     async function cargarMarcadores() {
       const response = await fetch("config.json");
       const config = await response.json();
@@ -66,6 +63,7 @@
         const markerEl = document.createElement("a-marker");
         markerEl.setAttribute("type", "pattern");
         markerEl.setAttribute("url", `marcadores/${marcador.nombre}`);
+        markerEl.setAttribute("emitevent", "true");
 
         if (marcador.tipo === "modelo") {
           const entityEl = document.createElement("a-entity");
@@ -78,6 +76,14 @@
           imageEl.setAttribute("scale", "2 2 2`);
           markerEl.appendChild(imageEl);
         }
+
+        markerEl.addEventListener("markerFound", () => {
+          console.log(`Marcador detectado: ${marcador.nombre}`);
+        });
+
+        markerEl.addEventListener("markerLost", () => {
+          console.log(`Marcador perdido: ${marcador.nombre}`);
+        });
 
         scene.appendChild(markerEl);
       });

@@ -32,6 +32,7 @@
   </style>
   <script>
     let selectedCameraDeviceId;
+    let currentStream = null;
 
     // Enumerar las cámaras disponibles y mostrar un menú de selección
     async function enumerarCamaras() {
@@ -59,6 +60,7 @@
       iniciarCamara(selectedCameraDeviceId);
     }
 
+    // Iniciar la cámara seleccionada
     async function iniciarCamara(deviceId) {
       try {
         const constraints = {
@@ -67,9 +69,14 @@
           }
         };
 
-        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        // Detener cualquier transmisión de cámara anterior
+        if (currentStream) {
+          currentStream.getTracks().forEach(track => track.stop());
+        }
+
+        currentStream = await navigator.mediaDevices.getUserMedia(constraints);
         const video = document.createElement('video');
-        video.srcObject = stream;
+        video.srcObject = currentStream;
         video.play();
       } catch (error) {
         console.error("Error al acceder a la cámara:", error);

@@ -1,27 +1,7 @@
 {
   "marcadores": [
     {
-      "nombre": "marcador1.patt",
-      "tipo": "modelo",
-      "archivo": "modelos/modelo1.gltf"
-    },
-    {
-      "nombre": "marcador2.patt",
-      "tipo": "imagen",
-      "archivo": "imagenes/imagen1.jpg"
-    },
-    {
-      "nombre": "marcador3.patt",
-      "tipo": "texto",
-      "texto": "Bienvenido al Proyecto RA"
-    },
-    {
       "nombre": "hiro.patt",
-      "tipo": "modelo",
-      "archivo": "modelos/modelo1.gltf"
-    },
-    {
-      "nombre": "kanji.patt",
       "tipo": "imagen",
       "archivo": "imagenes/imagen1.jpg"
     }

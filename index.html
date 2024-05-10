@@ -82,16 +82,6 @@
           textEl.setAttribute("align", "center");
           textEl.setAttribute("scale", "2 2 2");
           markerEl.appendChild(textEl);
-        } else if (marcador.tipo === "enlace") {
-          const linkEl = document.createElement("a-text");
-          linkEl.setAttribute("value", "Ir al enlace");
-          linkEl.setAttribute("color", "white");
-          linkEl.setAttribute("align", "center");
-          linkEl.setAttribute("scale", "2 2 2");
-          linkEl.addEventListener("click", () => {
-            window.location.href = marcador.url;
-          });
-          markerEl.appendChild(linkEl);
         }
 
         markerEl.addEventListener("markerFound", () => {
@@ -115,7 +105,7 @@
 <body>
   <div id="info">
     <h3>Proyecto Piloto de RA</h3>
-    <p>Enfoca el marcador con tu celular para ver el contenido.</p>
+    <p>Enfoca el marcador con tu celular para ver el modelo 3D o la imagen.</p>
   </div>
   <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false">
     <a-entity camera></a-entity>

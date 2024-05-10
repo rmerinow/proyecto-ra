@@ -1,24 +1,29 @@
 {
   "marcadores": [
     {
-      "nombre": "marcado2.patt",
+      "nombre": "marcador1.patt",
       "tipo": "modelo",
       "archivo": "modelos/modelo1.gltf"
     },
     {
-      "nombre": "marcado3.patt",
+      "nombre": "marcador2.patt",
       "tipo": "imagen",
       "archivo": "imagenes/imagen1.jpg"
     },
     {
-      "nombre": "marcador4.patt",
+      "nombre": "marcador3.patt",
       "tipo": "texto",
       "texto": "Bienvenido al Proyecto RA"
     },
     {
-      "nombre": "marcador5.patt",
-      "tipo": "enlace",
-      "url": "https://example.com"
+      "nombre": "hiro.patt",
+      "tipo": "modelo",
+      "archivo": "modelos/modelo1.gltf"
+    },
+    {
+      "nombre": "kanji.patt",
+      "tipo": "imagen",
+      "archivo": "imagenes/imagen1.jpg"
     }
   ]
 }
